@@ -1,0 +1,46 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>二级菜单</title>
+<style type="text/css">
+  body,ul{margin:0px; padding:0px}
+  #menu{width:400px; height:40px; background:#9FF; margin:0px auto;}
+  ul{list-style-type:none;}
+  ul li{width:100px; text-align:center; line-height:40px; float:left;}
+  a{text-decoration:none;display:block;width:100px;}
+  a:hover{background:#0CF; color:#fff;}
+  .two{display:none;}
+  .two li{width:100px;background:#FF6;color:#FFF;}
+</style>
+<script type="text/javascript" src="jquery-1.11.0.min.js">
+</script>
+<script>
+   $(function(){
+	   $(".navmenu").mouseover(function(){
+		   $(this).children("ul").show();
+		   }).mouseout(function(){
+			   $(this).children("ul").hide();
+			   })
+	   });
+</script>
+</head>
+<body>
+   <div id="menu">
+      <ul>
+         <li class="navmenu"><a href="#">首页</a></li>
+         <li class="navmenu"><a href="#">课程大厅</a>
+            <ul class="two">
+               <li><a href="#">Javascript</a></li>
+               <li><a href="#">html</a></li>
+               <li><a href="#">css</a></li>
+               <li><a href="#">botstrap</a></li>
+            </ul>
+         </li>
+         <li class="navmenu"><a href="#">经典案例</a></li>
+         <li class="navmenu"><a href="#">关于我们</a></li>
+      </ul>
+   </div>
+</body>
+</html>
