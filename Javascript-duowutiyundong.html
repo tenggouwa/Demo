@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>多物体运动</title>
+<style type="text/css">
+
+ul{list-style:none;}
+span{color:#FFF;font-size:10px;}
+#li1{background-color:#de8720;}
+#li2{background-color:#49b56d;}
+#li3{background-color:#bc4742;}
+#li4{background-color:#5279ac;}
+#li5{background-color:#c65a38;}
+#li6{background-color:#1de12c;}
+#div1 ul li{width:80px; height:80px;border-radius:80px;text-align:center;}
+</style>
+<script type="text/javascript">
+   var lis=document.getElementsByTagName("li")
+   window.onload=function(){
+	   for(var i=0;i<lis.length;i++){
+		   lis[i].onmouseover=function(){
+			   move(this,300)
+			   }
+		   lis[i].onmouseout=function(){
+			   move(this,80)
+			   }
+		   lis[i].timer=null;
+		   }
+		   function move(obj,dis){
+			   clearInterval(obj.timer)
+			   obj.timer=setInterval(function(){
+				  var speed=0;
+				  speed=(dis-obj.offsetWidth)/40;
+				  speed=speed>=0?Math.ceil(speed):Math.floor(speed);
+				  if(obj.offsetWidth==dis){
+					 clearInterval(timer); 
+					  }else{
+						  obj.style.width=obj.offsetWidth+speed+"px";
+						  } 
+				   },30)
+			   }
+	   }
+</script>
+</head>
+<body>
+<div id="div1">
+   <ul>
+      <li id="li1"><span>首页</span></li>
+      <li id="li2"><span>我的空间</span></li>
+      <li id="li3"><span>我的说说</span></li>
+      <li id="li4"><span>我的日志</span></li>
+      <li id="li5"><span>我的相册</span></li>
+      <li id="li6"><span>留言板</span></li>
+   </ul>
+</div>
+</body>
+</html>
