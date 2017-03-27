@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="js/react.js"></script>
+	<script type="text/javascript" src="js/react-dom.js"></script>
+	<script type="text/javascript" src="js/browser.min.js"></script>
+	<style type="text/css">
+		div h3{text-decoration: none;
+        	color: #f00;
+        	font-family: 微软雅黑;}
+	</style>
+</head>
+<body>
+	<div id="div1"></div>
+	<script type="text/babel">
+	    var name="Tom";
+		ReactDOM.render(
+           <h3>{name=="Tom"?100:99}</h3>,
+           document.getElementById("div1")
+		);
+	</script>
+</body>
+</html>
