@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="js/react.js"></script>
+	<script type="text/javascript" src="js/react-dom.js"></script>
+	<script type="text/javascript" src="js/browser.min.js"></script>
+	<style type="text/css">
+		
+	</style>
+</head>
+<body>
+	<div id="div1"></div>
+	<script type="text/babel">
+	   var div=<div id={false}>
+	   <input type="text" name="name" value={false} />
+	   <button type="button" name="button" disabled={false}>Hello!</button>
+	   <p>{false}</p>
+	   </div>;
+	   ReactDOM.render(
+          div,
+          document.getElementById("div1")
+	   );
+	</script>
+</body>
+</html>
