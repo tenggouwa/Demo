@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="js/react.js"></script>
+	<script type="text/javascript" src="js/react-dom.js"></script>
+	<script type="text/javascript" src="js/browser.min.js"></script>
+	<style type="text/css">
+		.special{text-decoration: none;
+        	background:#090;
+            color: #fff; 
+            }
+	</style>
+</head>
+<body>
+	<div id="div1"></div>
+	<script type="text/babel">
+	    var p1=<p className='special'>测试哈哈</p>;
+	    ReactDOM.render(
+          <h1>Hello World!{p1}</h1>,
+          document.getElementById("div1")
+	    );
+	</script>
+</body>
+</html>
