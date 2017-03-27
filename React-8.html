@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="js/react.js"></script>
+	<script type="text/javascript" src="js/react-dom.js"></script>
+	<script type="text/javascript" src="js/browser.min.js"></script>
+</head>
+<body>
+	<div id="div1"></div>
+	<script type="text/babel">
+	    var paraStyle = {
+         color:'#fff',
+         fontSize:'36px',
+         backgroundColor:'#090',
+         margin:'0px'
+	    };
+	    var para = (
+         <p style={paraStyle}>测试哈哈</p>
+	    );
+	    ReactDOM.render(
+        para,
+        document.getElementById("div1")
+	    )
+	</script>
+</body>
+</html>
