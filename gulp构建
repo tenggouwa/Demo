@@ -1,0 +1,42 @@
+1.网站根目录--工程目录、项目目录
+
+2.项目架构：
+  
+   开发环境src
+      -less     
+      -css
+      -js
+   
+   生产环境build
+      --all.js
+      --all.css
+
+3.npm init 初始化工程目录---生成package.json(配置文件)
+
+开发环境依赖 grunt gulp 各种插件
+
+npm install 包名 --save-dev   (-D)
+
+生产环境依赖 jquery bootstrap
+  
+npm install 包名 --save
+
+4.下次做项目的时候拷贝package.json 执行npm install 自动构建项目环境
+
+
+---------------------------
+1.实验步骤
+
+1.新建工程目录 
+   mkdir myzh
+2.切换到当前
+   cd myzh
+3.初始化工程目录
+   npm init -y
+4.安装包
+   开发环境依赖
+   生产环境依赖
+5,。新建各种资源目录
+
+6.新建gulpfile.js
+touch gulpfile.js
